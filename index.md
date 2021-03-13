@@ -24,5 +24,42 @@ footer {
 .hljs-params { color: lightpink }
 </style>
 
-# Name
+# Testing data pipeines
+
+Ksenia Tomak, Dodo Engineering
+Pasha Finkelshteyn, JetBrains
+
+---
+
+# Who we are
+
+---
+
+# What is Big Data
+
+---
+
+# Who are DEs?
+
+---
+
+# What is pipeline?
+
+---
+
+# Who needs pipelines
+
+---
+
+# QA of pipeline
+
+QA ?= QC
+
+---
+
+# QA of pipeline
+
+QA ≠ QC
+
+QA is about processes, and not only about software quality.
 
