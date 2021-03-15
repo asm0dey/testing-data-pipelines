@@ -7,7 +7,7 @@ paginate: true
 footer: @asm0di0 &emsp13;&emsp13;@if_no_then_yes
 backgroundImage: "linear-gradient(to bottom, #000 0%, #1a2028 50%, #293845 100%)"
 color: white
-title: Noname
+title: "Testing Data Pipelines: Himalayan peaks"
 ---
 <!--
 _class: lead
@@ -24,7 +24,8 @@ footer {
 .hljs-params { color: lightpink }
 </style>
 
-# Testing data pipeines
+# Testing Data Pipelines
+## Himalayan peaks
 
 Ksenia Tomak, Dodo Engineering
 Pasha Finkelshteyn, JetBrains
@@ -102,5 +103,37 @@ Reference data at the end of pipeline
 
 ---
 
-# Emulating real systems
+![bg](https://d33wubrfki0l68.cloudfront.net/a661dbbe55be3e9cb77889f24835a44c6daf53c2/ce0aa/logo.png)
 
+---
+
+# Test Containers
+
+```python
+import sqlalchemy
+from testcontainers.mysql import MySqlContainer
+
+with MySqlContainer('mysql:5.7.17') as mysql:
+    engine = sqlalchemy.create_engine(mysql.get_connection_url())
+    version, = engine.execute("select version()").fetchone()
+    print(version)  # 5.7.17
+```
+
+---
+
+# TestContainers
+
+Supported languages:
+
+* Java (and compatibles: Scala, Kotlin, etc.)
+* Python
+* Go
+* Node.js
+* Rust
+* .NET
+
+---
+
+# TestContainers
+
+...pic of pipeline with docker as source...
