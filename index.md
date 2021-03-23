@@ -135,7 +135,6 @@ Supported languages:
 ---
 
 # Test Containers
-
 ```python
 import sqlalchemy
 from testcontainers.mysql import MySqlContainer
@@ -145,3 +144,81 @@ with MySqlContainer('mysql:5.7.17') as mysql:
     version, = engine.execute("select version()").fetchone()
     print(version)  # 5.7.17
 ```
+
+---
+
+# Integration Tests
+
+Why test containers are not enough?
+
+* vendor lock tools (DB, processing, etc.)
+* real data
+* external error handling
+
+---
+# Integration Tests: How to
+
+* get data samples from prod, anonymize it
+* deploy full data backup on stage, depersonalize it ($$$)
+* run parallel job with different sink
+
+[Using production data for testing in a post GDPR world](https://www.sqlshack.com/using-production-data-testing-post-gdpr-world/)
+
+
+---
+# Data expectations
+
+Test:
+![](images/check.png) no data
+![](images/check.png) valid data
+![](images/check.png) empty partitions
+![](images/question.png) &nbsp;invalid data
+![](images/question.png) &nbsp;illegal data format
+
+---
+
+# Data expectations. Tools: 
+- [great expectations](https://greatexpectations.io/),
+- [Deequ](https://github.com/awslabs/deequ)
+
+--- 
+
+![](images/crisis.png) 
+Use Dead letter queue pattern for broken data 
+to prevent:
+- data loss
+- data traffic jam
+
+---
+# Monitoring 
+
+Why?
+
+How to collect:
+* StreamingQueryListener, QueryExecutionListener 
+* foreachBatch aggregates, sink as logs
+
+--- 
+# Monitoring visualization
+
+![](images/monitoring_visualize.png)
+
+[Visualizing Data Timeliness](https://medium.com/airbnb-engineering/visualizing-data-timeliness-at-airbnb-ee638fdf4710)
+
+---
+# End-to-End tests
+
+Compare with reports, old DWH
+
+Multiple dimentions:
+* data
+* data latency
+* performance, scalability
+
+---
+
+# Performance Tests
+
+Best performance test - initial data load
+
+(image with initial data load + next microbatches loading)
