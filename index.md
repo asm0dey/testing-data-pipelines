@@ -114,17 +114,10 @@ Reference data at the end of pipeline
 
 ---
 
-# Test Containers
+# TestContainers
 
-```python
-import sqlalchemy
-from testcontainers.mysql import MySqlContainer
+![bg](images/docker_pipeline.png)
 
-with MySqlContainer('mysql:5.7.17') as mysql:
-    engine = sqlalchemy.create_engine(mysql.get_connection_url())
-    version, = engine.execute("select version()").fetchone()
-    print(version)  # 5.7.17
-```
 
 ---
 
@@ -141,6 +134,14 @@ Supported languages:
 
 ---
 
-# TestContainers
+# Test Containers
 
-![bg](images/docker_pipeline.png)
+```python
+import sqlalchemy
+from testcontainers.mysql import MySqlContainer
+
+with MySqlContainer('mysql:5.7.17') as mysql:
+    engine = sqlalchemy.create_engine(mysql.get_connection_url())
+    version, = engine.execute("select version()").fetchone()
+    print(version)  # 5.7.17
+```
