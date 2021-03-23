@@ -24,8 +24,8 @@ footer {
 .hljs-params { color: lightpink }
 </style>
 
-# Testing Data Pipelines
-## Himalayan peaks
+# Himalayan Peaks
+## of Testing Data Pipelines
 
 Ksenia Tomak, Dodo Engineering
 Pasha Finkelshteyn, JetBrains
