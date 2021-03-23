@@ -68,13 +68,13 @@ QA is about processes, and not only about software quality.
 
 # Pyramid of testing. Unit
 
-...pic of unit trapezium here...
+![bg](images/unit_test.png)
 
 ---
 
 # Typical pipeline
 
-...pic with one source and one target...
+![bg](images/pipeline.png)
 
 ---
 
@@ -90,16 +90,23 @@ _Correctness is a business term_
 
 # Let's paste fakes!
 
-...pic of the pipeline with fake input...
+![bg](images/unit_pipeline.png)
 
 Fake/mock input data
 Reference data at the end of pipeline
 
 ---
 
+# Tools
+
+[holdenk/spark-testing-base](https://github.com/holdenk/spark-testing-base) ← Tools to run tests
+[MrPowers/spark-daria](https://github.com/MrPowers/spark-daria) ← tools to easily create test data
+
+---
+
 # Component testing
 
-...pic of augmented pyramid with components...
+![bg](images/component_test.png)
 
 ---
 
@@ -136,4 +143,4 @@ Supported languages:
 
 # TestContainers
 
-...pic of pipeline with docker as source...
+![bg](images/docker_pipeline.png)
