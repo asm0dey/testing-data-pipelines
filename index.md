@@ -156,14 +156,16 @@ Why test containers are not enough?
 * external error handling
 
 ---
+<!-- 20 -->
 # Integration Tests: How to
 
 * get data samples from prod, anonymize it
 * deploy full data backup on stage, depersonalize it ($$$)
 * run parallel job with different sink
 
-[Using production data for testing in a post GDPR world](https://www.sqlshack.com/using-production-data-testing-post-gdpr-world/)
+<!--_footer: '[Using production data for testing in a post GDPR world](https://www.sqlshack.com/using-production-data-testing-post-gdpr-world/)
 
+@asm0di0 &emsp13;&emsp13;@if_no_then_yes'-->
 
 ---
 # Data expectations
