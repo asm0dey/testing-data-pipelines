@@ -200,12 +200,15 @@ How to collect:
 * StreamingQueryListener, QueryExecutionListener 
 * foreachBatch aggregates, sink as logs
 
---- 
-# Monitoring visualization
+---
 
-![](images/monitoring_visualize.png)
+<!-- 
+_color: black
+_footer: '[Visualizing Data Timeliness](https://medium.com/airbnb-engineering/visualizing-data-timeliness-at-airbnb-ee638fdf4710)' -->
 
-[Visualizing Data Timeliness](https://medium.com/airbnb-engineering/visualizing-data-timeliness-at-airbnb-ee638fdf4710)
+### Monitoring visualization
+
+![bg](images/monitoring_visualize.png)
 
 ---
 # End-to-End tests
