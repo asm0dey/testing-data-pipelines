@@ -147,58 +147,84 @@ with MySqlContainer('mysql:5.7.17') as mysql:
 
 ---
 
-# Integration Tests
+![bg](images/integration_test.png)
 
-Why test containers are not enough?
+<!-- TODO: Pasha: перерисовать картинку
+1. real systems, 
+2. real data 
+3. monitoring
+4. performance
+-->
+
+---
+<!-- TODO: add slide numbers in comments -->
+<!-- Integration: от начала до конца пайплайна -->
+# Real systems
+
+Why component tests are not enough?
 
 * vendor lock tools (DB, processing, etc.)
-* real data
 * external error handling
 
+<!-- TODO: KSU deploy dev servers/instances, Azure SQL specific errors,
+Pasha pics-->
+
 ---
-<!-- 20 -->
-# Integration Tests: How to
+
+<!-- TODO: different pics -->
+
+# Real data
 
 * get data samples from prod, anonymize it
-* deploy full data backup on stage, depersonalize it ($$$)
-* run parallel job with different sink
 
-<!--_footer: '[Using production data for testing in a post GDPR world](https://www.sqlshack.com/using-production-data-testing-post-gdpr-world/)
-
-@asm0di0 &emsp13;&emsp13;@if_no_then_yes'-->
+<!-- TODO: compare with reference sample -->
 
 ---
-# Data expectations
-
+# Real data expectations
+<!-- TODO: emoji -->
 Test:
 ![](images/check.png) no data
 ![](images/check.png) valid data
-![](images/check.png) empty partitions
 ![](images/question.png) &nbsp;invalid data
 ![](images/question.png) &nbsp;illegal data format
 
----
+Property-based testing
 
-# Data expectations. Tools: 
+---
+<!-- TODO: rearrange -->
+
+# Real data expectations. Tools: 
 - [great expectations](https://greatexpectations.io/),
 - [Deequ](https://github.com/awslabs/deequ)
 
---- 
-
-![](images/crisis.png) 
-Use Dead letter queue pattern for broken data 
-to prevent:
-- data loss
-- data traffic jam
-
 ---
+
 # Monitoring 
 
-Why?
+**Why?**
 
-How to collect:
-* StreamingQueryListener, QueryExecutionListener 
-* foreachBatch aggregates, sink as logs
+<!-- TODO: -->
+
+---
+
+# Monitoring 
+
+What?
+* data volumes, 
+* counters,
+* time,
+* dead letter queue monitoring
+
+<!-- TODO: prepare examples -->
+
+
+---
+
+# Monitoring 
+
+How?
+* use Listeners
+* use data aggregations
 
 ---
 
@@ -209,6 +235,7 @@ _footer: '[Visualizing Data Timeliness](https://medium.com/airbnb-engineering/vi
 ### Monitoring visualization
 
 ![bg](images/monitoring_visualize.png)
+<!-- TODO: add boundaries -->
 
 ---
 # End-to-End tests
@@ -222,8 +249,35 @@ Multiple dimentions:
 
 ---
 
+![bg](images/performance_test.png)
+
+---
+
 # Performance Tests
 
+SLA
 Best performance test - initial data load
 
-(image with initial data load + next microbatches loading)
+<!-- (image with initial data load + next microbatches loading) -->
+
+---
+<!-- _class: lead -->
+# How to apply?
+
+---
+
+# Real data, real system
+
+* deploy full data backup on stage env, anonymize it :money_mouth_face:
+
+---
+
+# Real prod
+
+* run parallel job with different sink
+
+<!--_footer: '[Using production data for testing in a post GDPR world](https://www.sqlshack.com/using-production-data-testing-post-gdpr-world/)
+
+@asm0di0 &emsp13;&emsp13;@if_no_then_yes'-->
+
+
