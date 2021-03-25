@@ -235,12 +235,13 @@ How?
 
 <!-- 
 _color: black
-_footer: '[Visualizing Data Timeliness](https://medium.com/airbnb-engineering/visualizing-data-timeliness-at-airbnb-ee638fdf4710)' -->
+_backgroundImage: "linear-gradient(to bottom, #fff 0%, #fff 100%)"
+_footer: '[Visualizing Data Timeliness](https://medium.com/airbnb-engineering/visualizing-data-timeliness-at-airbnb-ee638fdf4710)'
+-->
 
 ### Monitoring visualization
 
-![bg](images/monitoring_visualize.png)
-<!-- TODO: add boundaries -->
+![bg fit](images/visualize.png)
 
 ---
 # End-to-End tests
