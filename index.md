@@ -44,7 +44,7 @@ Pasha Finkelshteyn, JetBrains
 
 ---
 
-# What is pipeline?
+# What is a pipeline?
 
 ---
 
@@ -62,13 +62,13 @@ QA ?= QC
 
 QA ≠ QC
 
-QA is about processes, and not only about software quality.
+QA is about processes and not only about software quality.
 
 ---
 
 # Pyramid of testing. Unit
 
-![bg](images/unit_test.png)
+![bg](images/unit.png)
 
 ---
 
@@ -93,7 +93,7 @@ _Correctness is a business term_
 ![bg](images/unit_pipeline.png)
 
 Fake/mock input data
-Reference data at the end of pipeline
+Reference data at the end of the pipeline
 
 ---
 
@@ -106,7 +106,7 @@ Reference data at the end of pipeline
 
 # Component testing
 
-![bg](images/component_test.png)
+![bg](images/component.png)
 
 ---
 
@@ -125,12 +125,12 @@ Reference data at the end of pipeline
 
 Supported languages:
 
-* Java (and compatibles: Scala, Kotlin, etc.)
-* Python
-* Go
-* Node.js
-* Rust
-* .NET
+- Java (and compatibles: Scala, Kotlin, etc.)
+- Python
+- Go
+- Node.js
+- Rust
+- .NET
 
 ---
 
@@ -147,24 +147,29 @@ with MySqlContainer('mysql:5.7.17') as mysql:
 
 ---
 
-![bg](images/integration_test.png)
+![bg](images/systems.png)
 
-<!-- TODO: Pasha: перерисовать картинку
-1. real systems, 
-2. real data 
-3. monitoring
-4. performance
--->
+---
+
+![bg](images/data.png)
+
+---
+
+![bg](images/monitoring.png)
+
+---
+
+![bg](images/performance.png)
 
 ---
 <!-- TODO: add slide numbers in comments -->
 <!-- Integration: от начала до конца пайплайна -->
 # Real systems
 
-Why component tests are not enough?
+Why are component tests not enough?
 
-* vendor lock tools (DB, processing, etc.)
-* external error handling
+- vendor lock tools (DB, processing, etc.)
+- external error handling
 
 <!-- TODO: KSU deploy dev servers/instances, Azure SQL specific errors,
 Pasha pics-->
@@ -175,7 +180,7 @@ Pasha pics-->
 
 # Real data
 
-* get data samples from prod, anonymize it
+get data samples from prod, anonymize it
 
 <!-- TODO: compare with reference sample -->
 
@@ -183,12 +188,12 @@ Pasha pics-->
 # Real data expectations
 <!-- TODO: emoji -->
 Test:
-![](images/check.png) no data
-![](images/check.png) valid data
-![](images/question.png) &nbsp;invalid data
-![](images/question.png) &nbsp;illegal data format
+✅ no data
+✅ valid data
+❓ invalid data
+❓ illegal data format
 
-Property-based testing
++ Property-based testing
 
 ---
 <!-- TODO: rearrange -->
@@ -210,10 +215,10 @@ Property-based testing
 # Monitoring 
 
 What?
-* data volumes, 
-* counters,
-* time,
-* dead letter queue monitoring
+- data volumes, 
+- counters,
+- time,
+- dead letter queue monitoring
 
 <!-- TODO: prepare examples -->
 
@@ -223,8 +228,8 @@ What?
 # Monitoring 
 
 How?
-* use Listeners
-* use data aggregations
+- use Listeners
+- use data aggregations
 
 ---
 
@@ -242,10 +247,10 @@ _footer: '[Visualizing Data Timeliness](https://medium.com/airbnb-engineering/vi
 
 Compare with reports, old DWH
 
-Multiple dimentions:
-* data
-* data latency
-* performance, scalability
+Multiple dimensions:
+- data
+- data latency
+- performance, scalability
 
 ---
 
@@ -268,13 +273,13 @@ Best performance test - initial data load
 
 # Real data, real system
 
-* deploy full data backup on stage env, anonymize it :money_mouth_face:
+- deploy full data backup on stage env, anonymize it :money_mouth_face:
 
 ---
 
 # Real prod
 
-* run parallel job with different sink
+- run a parallel job with different sink
 
 <!--_footer: '[Using production data for testing in a post GDPR world](https://www.sqlshack.com/using-production-data-testing-post-gdpr-world/)
 
