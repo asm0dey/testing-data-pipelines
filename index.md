@@ -184,12 +184,16 @@ Pasha pics-->
 - get data samples from prod
 - anonymize it
 
+---
+
+# Compare to reference
+
+![bg](images/reference.png)
 
 <!-- TODO: compare with reference sample -->
 
 ---
 # Real data expectations
-<!-- TODO: emoji -->
 Test:
 ✅ no data
 ✅ valid data
@@ -211,6 +215,9 @@ Test:
 
 **Why?**
 
+- The only REAL testing is production
+- Data tends to change over time
+
 <!-- TODO: -->
 
 ---
@@ -218,9 +225,9 @@ Test:
 # Monitoring 
 
 What?
-- data volumes, 
-- counters,
-- time,
+- data volumes
+- counters
+- time
 - dead letter queue monitoring
 
 <!-- TODO: prepare examples -->
@@ -258,16 +265,21 @@ Multiple dimensions:
 
 ---
 
-![bg](images/performance_test.png)
+![bg](images/performance.png)
 
 ---
 
 # Performance Tests
 
-SLA
-Best performance test - initial data load
+<br/>
+<br/>
+<br/>
+<br/>
 
-<!-- (image with initial data load + next microbatches loading) -->
+- Start with SLA
+- Best performance test - initial data load
+
+![bg](images/initial.png)
 
 ---
 <!-- _class: lead -->
@@ -277,7 +289,7 @@ Best performance test - initial data load
 
 # Real data, real system
 
-- deploy full data backup on stage env, anonymize it :money_mouth_face:
+Deploy full data backup on stage env, anonymize it :money_mouth_face:
 
 ---
 
