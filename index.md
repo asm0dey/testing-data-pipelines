@@ -295,10 +295,12 @@ Deploy full data backup on stage env, anonymize it :money_mouth_face:
 
 # Real prod
 
-- run a parallel job with different sink
+<br/>
+Run a parallel job with a different sink
 
-<!--_footer: '[Using production data for testing in a post GDPR world](https://www.sqlshack.com/using-production-data-testing-post-gdpr-world/)
+![bg](images/parallel.png)
 
-@asm0di0 &emsp13;&emsp13;@if_no_then_yes'-->
+<!--_footer: '@asm0di0 &emsp13;&emsp13;@if_no_then_yes
 
+[Using production data for testing in a post GDPR world](https://www.sqlshack.com/using-production-data-testing-post-gdpr-world/)'-->
 
