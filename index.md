@@ -176,11 +176,14 @@ Pasha pics-->
 
 ---
 
-<!-- TODO: different pics -->
+![bg](images/sample.png)
 
 # Real data
+<br/>
 
-get data samples from prod, anonymize it
+- get data samples from prod
+- anonymize it
+
 
 <!-- TODO: compare with reference sample -->
 
