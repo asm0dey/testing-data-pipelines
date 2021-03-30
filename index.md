@@ -46,9 +46,13 @@ Pasha Finkelshteyn, JetBrains
 
 # What is a pipeline?
 
+<!-- TODO: Bronze/Silver/Gold -->
+
 ---
 
 # Who needs pipelines
+
+<!-- TODO: DS/DA/Marketing -->
 
 ---
 
@@ -75,6 +79,11 @@ QA is about processes and not only about software quality.
 # Typical pipeline
 
 ![bg](images/pipeline.png)
+
+---
+
+# Typical pipeline
+<!-- TODO: add json example -->
 
 ---
 
@@ -144,6 +153,7 @@ with MySqlContainer('mysql:5.7.17') as mysql:
     version, = engine.execute("select version()").fetchone()
     print(version)  # 5.7.17
 ```
+<!-- TODO: line highlighting -->
 
 ---
 
@@ -179,18 +189,18 @@ anonymize it
 
 ---
 
-# Real data
-
-Deploy full data backup on stage env,
-anonymize it :money_mouth_face:
-
----
-
 # Compare to reference
 
 ![bg](images/reference.png)
 
 <!-- TODO: compare with reference sample -->
+
+---
+
+# Real data
+
+Deploy full data backup on stage env,
+anonymize it :money_mouth_face:
 
 ---
 
@@ -246,6 +256,8 @@ table_rows = [
 
 sample_df = spark.createDataFrame(table_rows, StructType.fromJson(schema))
 ```
+<!-- TODO: line highlighting -->
+
 ---
 ## Great expectations
 ```python
@@ -272,6 +284,8 @@ ge_sample_df.expect_column_values_to_be_in_set("Country", ["RU", "KZ"])
     }
   }
 ```
+<!-- TODO: line highlighting -->
+
 ---
 ## Python Deequ
 ```python
@@ -290,6 +304,9 @@ checkResult =(
 checkResult_df = VerificationResult.checkResultsAsDataFrame(spark, checkResult)
 checkResult_df.show()
 ```
+
+<!-- TODO: line highlighting -->
+
 <!-- 
 _footer: '
 [Testing data quality at scale with PyDeequ
@@ -319,6 +336,7 @@ What?
 - time
 - dead letter queue monitoring
 - service health
+- business metrics
 
 ---
 
@@ -378,11 +396,6 @@ Multiple dimensions:
 
 ---
 
-<!-- _class: lead -->
-# How to apply?
-
----
-
 # Real prod
 
 <br/>
@@ -394,3 +407,14 @@ Run a parallel job with a different sink
 
 [Using production data for testing in a post GDPR world](https://www.sqlshack.com/using-production-data-testing-post-gdpr-world/)'-->
 
+---
+
+<!-- TODO: whole pyramid -->
+
+---
+
+<!-- TODO: Summary -->
+
+---
+
+<!-- TODO: Final slide -->
