@@ -150,19 +150,6 @@ with MySqlContainer('mysql:5.7.17') as mysql:
 ![bg](images/systems.png)
 
 ---
-
-![bg](images/data.png)
-
----
-
-![bg](images/monitoring.png)
-
----
-
-![bg](images/performance.png)
-
----
-<!-- TODO: add slide numbers in comments -->
 <!-- Integration: от начала до конца пайплайна -->
 # Real systems
 
@@ -173,6 +160,10 @@ Why are component tests not enough?
 
 <!-- TODO: KSU deploy dev servers/instances, Azure SQL specific errors,
 Pasha pics-->
+
+---
+
+![bg](images/data.png)
 
 ---
 
@@ -208,6 +199,90 @@ Test:
 # Real data expectations. Tools: 
 - [great expectations](https://greatexpectations.io/),
 - [Deequ](https://github.com/awslabs/deequ)
+
+<!-- 
+_footer: '[Automated Testing For Protecting Data Pipelines from Undocumented Assumptions
+](https://databricks.com/session_na20/automated-testing-for-protecting-data-pipelines-from-undocumented-assumptions)'
+-->
+
+---
+```Python
+from pyspark.sql.types import Row, StructType
+from datetime import datetime
+
+schema = {
+  "type": "struct",
+  "fields": [
+    {"name": "Id", "type": "long", "nullable": False, "metadata": {}},
+    {"name": "SaleDate", "type": "timestamp", "nullable": False, "metadata": {}},
+    {"name": "Country", "type": "string", "nullable": False, "metadata": {}},
+  ]
+}
+
+table_rows = [
+        Row(1, datetime(2021, 1, 1, 10, 0, 0), "RU" ),
+        Row(2, datetime(1000, 1, 1, 10, 0, 0), "KZ"),
+        Row(2, datetime(2018, 1, 1, 10, 0, 0), "AU"),
+        Row(2, datetime(2019, 1, 1, 10, 0, 0), ""),
+    ]
+
+sample_df = spark.createDataFrame(table_rows, StructType.fromJson(schema))
+```
+---
+## Great expectations
+```python
+from great_expectations.dataset.sparkdf_dataset import SparkDFDataset
+
+ge_sample_df = SparkDFDataset(sample_df)
+ge_sample_df.expect_column_values_to_be_in_set("Country", ["RU", "KZ"])
+```
+---
+
+## Great expectations
+```json
+{
+  "result": {
+    "element_count": 4,
+    "unexpected_count": 2,
+    "unexpected_percent": 50.0,
+    "partial_unexpected_list": ["AU",""]
+  },
+  "success": false,
+  "expectation_config": {
+    "kwargs": {
+      "column": "Country",
+      "value_set": ["RU", "KZ"]
+    }
+  }
+}
+```
+---
+## Python Deequ
+```python
+# No Spark 3.0 support yet
+from pydeequ.checks import *
+from pydeequ.verification import *
+
+check = Check(spark, CheckLevel.Warning, "Country Check")
+checkResult =(
+  VerificationSuite(spark)
+    .onData(sample_df)
+    .addCheck(
+        check.isContainedIn("Counrty", ["RU","KZ"]))
+   .run()
+)  
+checkResult_df = VerificationResult.checkResultsAsDataFrame(spark, checkResult)
+checkResult_df.show()
+```
+<!-- 
+_footer: '
+[Testing data quality at scale with PyDeequ
+](https://aws.amazon.com/blogs/big-data/testing-data-quality-at-scale-with-pydeequ/)'
+-->
+
+---
+
+![bg](images/monitoring.png)
 
 ---
 
