@@ -150,21 +150,18 @@ with MySqlContainer('mysql:5.7.17') as mysql:
 ![bg](images/systems.png)
 
 ---
+
+<!-- _backgroundImage: #FFFFFF -->
+![bg](rgb(255,255,255))
+![](images/enterprise-bi-adf.png)
+
+---
 # Real systems
 
 Why are component tests not enough?
 
 - vendor lock tools (DB, processing, etc.)
 - external error handling
-
-<!-- TODO: KSU deploy dev servers/instances, Azure SQL specific errors,
-Pasha pics-->
-
----
-
-<!-- _backgroundImage: #FFFFFF -->
-![bg](rgb(255,255,255))
-![](images/enterprise-bi-adf.png)
 
 ---
 
@@ -177,8 +174,15 @@ Pasha pics-->
 # Real data
 <br/>
 
-- get data samples from prod
-- anonymize it
+Get data samples from prod, 
+anonymize it
+
+---
+
+# Real data
+
+Deploy full data backup on stage env,
+anonymize it :money_mouth_face:
 
 ---
 
@@ -189,13 +193,15 @@ Pasha pics-->
 <!-- TODO: compare with reference sample -->
 
 ---
+
+
+---
 # Real data expectations
 Test:
 ✅ no data
 ✅ valid data
 ❓ invalid data
 ❓ illegal data format
-
 
 ---
 <!-- TODO: rearrange -->
@@ -356,15 +362,12 @@ Multiple dimensions:
 
 ![bg](images/initial.png)
 
+<!-- TODO: reorder howto after real data -->
+
 ---
+
 <!-- _class: lead -->
 # How to apply?
-
----
-
-# Real data, real system
-
-Deploy full data backup on stage env, anonymize it :money_mouth_face:
 
 ---
 
