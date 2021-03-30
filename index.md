@@ -258,7 +258,6 @@ ge_sample_df.expect_column_values_to_be_in_set("Country", ["RU", "KZ"])
 
 ## Great expectations
 ```json
-{
   "result": {
     "element_count": 4,
     "unexpected_count": 2,
@@ -272,7 +271,6 @@ ge_sample_df.expect_column_values_to_be_in_set("Country", ["RU", "KZ"])
       "value_set": ["RU", "KZ"]
     }
   }
-}
 ```
 ---
 ## Python Deequ
@@ -331,6 +329,12 @@ How?
 - use data aggregations
 
 ---
+<!-- _class: lead -->
+# Data pipelines is always DAG
+Monitoring should visualize it
+<!-- Specifics of data pipeline monitoring -->
+
+---
 
 <!-- 
 _color: black
@@ -365,8 +369,8 @@ Multiple dimensions:
 <br/>
 <br/>
 
-- Start with SLA
-- Best performance test - initial data load
+- start with SLA
+- test your initial data load
 
 ![bg](images/initial.png)
 
