@@ -194,6 +194,14 @@ anonymize it :money_mouth_face:
 
 ---
 
+<!-- _class: lead -->
+# <!-- fit --> In usual testing you won't trust your code
+
+---
+<!-- _class: lead -->
+
+# <!-- fit --> In pipeline testing  you won't trust 
+# <!-- fit --> both your code and your data
 
 ---
 # Real data expectations
