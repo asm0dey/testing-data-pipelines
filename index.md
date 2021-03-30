@@ -150,7 +150,6 @@ with MySqlContainer('mysql:5.7.17') as mysql:
 ![bg](images/systems.png)
 
 ---
-<!-- Integration: от начала до конца пайплайна -->
 # Real systems
 
 Why are component tests not enough?
@@ -160,6 +159,12 @@ Why are component tests not enough?
 
 <!-- TODO: KSU deploy dev servers/instances, Azure SQL specific errors,
 Pasha pics-->
+
+---
+
+<!-- _backgroundImage: #FFFFFF -->
+![bg](rgb(255,255,255))
+![](images/enterprise-bi-adf.png)
 
 ---
 
@@ -191,7 +196,6 @@ Test:
 ❓ invalid data
 ❓ illegal data format
 
-+ Property-based testing
 
 ---
 <!-- TODO: rearrange -->
@@ -293,8 +297,6 @@ _footer: '
 - The only REAL testing is production
 - Data tends to change over time
 
-<!-- TODO: -->
-
 ---
 
 # Monitoring 
@@ -304,9 +306,7 @@ What?
 - counters
 - time
 - dead letter queue monitoring
-
-<!-- TODO: prepare examples -->
-
+- service health
 
 ---
 
