@@ -32,15 +32,51 @@ Pasha Finkelshteyn, JetBrains
 
 ---
 
-# Who we are
+# Ksenia Tomak
+
+![bg left:40%](images/ksenia.jpg)
+
+- Team Lead, Dodo Engineering
+- @if_no_then_yes
+
+Industrial IoT, DE, Storages
+
+---
+<!-- _class: lead -->
+# Pasha Finkelshteyn
+
+![bg brightness:40%](images/asm0dey.jpg)
+
+Developer :avocado: for Big Data @ JetBrains
+
+@asm0di0
 
 ---
 
 # What is Big Data
 
+* Doesn't fit the single node (or Excel)
+* Maybe scaled when growing
+* Enough data to make reliable business solutions
+
 ---
 
-# Who are DEs?
+# Who are DEs
+
+Plumber of data
+
+Data is produces by 
+- sensors
+- clickstreams
+- etc
+
+---
+
+# Big Data Storage Formats
+
+- CSV
+- ORC
+- Parquet
 
 ---
 
@@ -52,7 +88,9 @@ Pasha Finkelshteyn, JetBrains
 
 # Who needs pipelines
 
-<!-- TODO: DS/DA/Marketing -->
+- Data Scientists handle huge amounts of data to create experiments
+- Data Analysts create dashboards and reports for management
+- Marketing makes decisions based on aggregated and processed data
 
 ---
 

@@ -6,3 +6,4 @@ node_modules/
 .idea/
 node_modules
 images/.DS_Store
+.vscode/
