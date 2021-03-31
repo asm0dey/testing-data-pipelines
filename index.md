@@ -68,7 +68,7 @@ Plumber of data
 Data is produces by 
 - sensors
 - clickstreams
-- etc
+- etc.
 
 ---
 
@@ -182,16 +182,17 @@ Supported languages:
 ---
 
 # Test Containers
-```python
-import sqlalchemy
-from testcontainers.mysql import MySqlContainer
+![width:1140](images/tc.svg)
 
-with MySqlContainer('mysql:5.7.17') as mysql:
-    engine = sqlalchemy.create_engine(mysql.get_connection_url())
-    version, = engine.execute("select version()").fetchone()
-    print(version)  # 5.7.17
-```
-<!-- TODO: line highlighting -->
+---
+
+# Test Containers
+![width:1140](images/tc2.svg)
+
+---
+
+# Test Containers
+![width:1140](images/tc3.svg)
 
 ---
 
@@ -272,76 +273,72 @@ _footer: '[Automated Testing For Protecting Data Pipelines from Undocumented Ass
 -->
 
 ---
-```Python
-from pyspark.sql.types import Row, StructType
-from datetime import datetime
 
-schema = {
-  "type": "struct",
-  "fields": [
-    {"name": "Id", "type": "long", "nullable": False, "metadata": {}},
-    {"name": "SaleDate", "type": "timestamp", "nullable": False, "metadata": {}},
-    {"name": "Country", "type": "string", "nullable": False, "metadata": {}},
-  ]
+![width:1140](images/dq1.svg)
+
+---
+
+![width:1140](images/dq2.svg)
+
+---
+
+![width:1140](images/dq3.svg)
+
+---
+
+![width:1140](images/dq4.svg)
+
+---
+## Great expectations
+
+![width:1140](images/ge.svg)
+
+
+---
+
+<style scoped>
+p > img {
+    display:block;
+    margin:auto;
 }
-
-table_rows = [
-        Row(1, datetime(2021, 1, 1, 10, 0, 0), "RU" ),
-        Row(2, datetime(1000, 1, 1, 10, 0, 0), "KZ"),
-        Row(2, datetime(2018, 1, 1, 10, 0, 0), "AU"),
-        Row(2, datetime(2019, 1, 1, 10, 0, 0), ""),
-    ]
-
-sample_df = spark.createDataFrame(table_rows, StructType.fromJson(schema))
-```
-<!-- TODO: line highlighting -->
-
----
-## Great expectations
-```python
-from great_expectations.dataset.sparkdf_dataset import SparkDFDataset
-
-ge_sample_df = SparkDFDataset(sample_df)
-ge_sample_df.expect_column_values_to_be_in_set("Country", ["RU", "KZ"])
-```
----
+</style>
 
 ## Great expectations
-```json
-  "result": {
-    "element_count": 4,
-    "unexpected_count": 2,
-    "unexpected_percent": 50.0,
-    "partial_unexpected_list": ["AU",""]
-  },
-  "success": false,
-  "expectation_config": {
-    "kwargs": {
-      "column": "Country",
-      "value_set": ["RU", "KZ"]
-    }
-  }
-```
-<!-- TODO: line highlighting -->
+![height:480](images/ge_result.svg)
 
 ---
+
 ## Python Deequ
-```python
-# No Spark 3.0 support yet
-from pydeequ.checks import *
-from pydeequ.verification import *
 
-check = Check(spark, CheckLevel.Warning, "Country Check")
-checkResult =(
-  VerificationSuite(spark)
-    .onData(sample_df)
-    .addCheck(
-        check.isContainedIn("Counrty", ["RU","KZ"]))
-   .run()
-)  
-checkResult_df = VerificationResult.checkResultsAsDataFrame(spark, checkResult)
-checkResult_df.show()
-```
+![width:1140](images/pydq.svg)
+
+<!-- TODO: line highlighting -->
+
+<!-- 
+_footer: '
+[Testing data quality at scale with PyDeequ
+](https://aws.amazon.com/blogs/big-data/testing-data-quality-at-scale-with-pydeequ/)'
+-->
+
+---
+
+## Python Deequ
+
+![width:1140](images/pydq2.svg)
+
+<!-- TODO: line highlighting -->
+
+<!-- 
+_footer: '
+[Testing data quality at scale with PyDeequ
+](https://aws.amazon.com/blogs/big-data/testing-data-quality-at-scale-with-pydeequ/)'
+-->
+
+---
+
+## Python Deequ
+
+![width:1140](images/pydq3.svg)
 
 <!-- TODO: line highlighting -->
 
