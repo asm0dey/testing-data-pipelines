@@ -36,7 +36,7 @@ Pasha Finkelshteyn, JetBrains
 
 ![bg left:40%](images/ksenia.jpg)
 
-- Team Lead, Dodo Engineering
+- Tech Lead, Dodo Engineering
 - @if_no_then_yes
 
 Industrial IoT, DE, Storages
@@ -59,6 +59,7 @@ Developer :avocado: for Big Data @ JetBrains
 * Maybe scaled when growing
 * Enough data to make reliable business solutions
 
+<!-- 3V: volume, velocity, variety -->
 ---
 
 # Who are DEs
@@ -88,15 +89,15 @@ Data is produces by
 
 # Who needs pipelines
 
-- Data Scientists handle huge amounts of data to create experiments
-- Data Analysts create dashboards and reports for management
-- Marketing makes decisions based on aggregated and processed data
+- Data Scientists
+- Data Analysts
+- Marketing
+- PO
 
 ---
 
-# QA of pipeline
-
-QA ?= QC
+<!-- _class: lead -->
+# <!-- fit --> QA ?= QC
 
 ---
 
