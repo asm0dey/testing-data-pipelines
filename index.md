@@ -93,7 +93,7 @@ Data is produces by
 ---
 <!-- _backgroundImage: "linear-gradient(to bottom, #000, #000)" -->
 
-# What is a data pipeline?
+# Data lake?
 
 ![width:1140](images/datalake_layers.jpg)
 
