@@ -85,7 +85,7 @@ Data is produces by
 
 # What is a pipeline?
 
-![width:1140](images/datalake-layers.jpg)
+![width:1140](images/datalake_layers.jpg)
 
 ---
 
