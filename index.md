@@ -435,7 +435,7 @@ Multiple dimensions:
 <br/>
 <br/>
 
-- start with SLA
+- start with SLO
 - test your initial data load
 
 ![bg](images/initial.png)
@@ -457,12 +457,26 @@ Run a parallel job with a different sink
 
 ---
 
-<!-- TODO: whole pyramid -->
+![bg](images/performance.png)
 
 ---
 
-<!-- TODO: Summary -->
+# Summary
+
+* Testing pipeline is like testing code
+* Testing pipelines is not like testing code
+* Pipeline quality is not only about testing
+* Sometimes testing outside of production is tricky
 
 ---
 
-<!-- TODO: Final slide -->
+<!-- 
+_class: lead
+_footer: ""
+ -->
+
+# Thanks!
+## Questions? :bow:
+
+@asm0di0
+@if_no_then_yes
