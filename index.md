@@ -60,6 +60,7 @@ Developer :avocado: for Big Data @ JetBrains
 * Enough data to make reliable business solutions
 
 <!-- 3V: volume, velocity, variety -->
+
 ---
 
 # Who are DEs
@@ -71,13 +72,13 @@ Data is produces by
 - clickstreams
 - etc.
 
----
+<!-- ---
 
 # Big Data Storage Formats
 
 - CSV
 - ORC
-- Parquet
+- Parquet -->
 
 ---
 <!-- _backgroundImage: "linear-gradient(to bottom, #000, #000)" -->
