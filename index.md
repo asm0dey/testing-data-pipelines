@@ -83,7 +83,9 @@ Data is produces by
 
 # What is a pipeline?
 
-<!-- TODO: Bronze/Silver/Gold -->
+![bg](#000)
+
+![width:1140](images/datalake-layers.jpg)
 
 ---
 
@@ -101,9 +103,8 @@ Data is produces by
 
 ---
 
-# QA of pipeline
-
-QA ≠ QC
+<!-- _class: lead -->
+# <!-- fit --> QA ≠ QC
 
 QA is about processes and not only about software quality.
 
@@ -306,6 +307,7 @@ p > img {
 
 ## Great expectations
 ![height:480](images/ge_result.svg)
+<!-- TODO: persist df -->
 
 ---
 
