@@ -80,10 +80,9 @@ Data is produces by
 - Parquet
 
 ---
+<!-- _backgroundImage: "linear-gradient(to bottom, #000, #000)" -->
 
 # What is a pipeline?
-
-![bg](#000)
 
 ![width:1140](images/datalake-layers.jpg)
 
