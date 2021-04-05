@@ -81,9 +81,18 @@ Data is produces by
 - Parquet -->
 
 ---
-<!-- _backgroundImage: "linear-gradient(to bottom, #000, #000)" -->
+<!-- _class: lead -->
+# What is a data pipeline?
 
-# What is a pipeline?
+---
+<!-- _class: lead -->
+# Data processing
+
+![width:700](images/etl.png)
+
+---
+
+# What is a data pipeline?
 
 ![width:1140](images/datalake_layers.jpg)
 
