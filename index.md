@@ -126,9 +126,18 @@ QA is about processes and not only about software quality.
 
 ---
 
+<!-- _backgroundImage: "linear-gradient(to bottom, #000, #000)" -->
+
+# Bronze→Silver pipeline
+
+![width:1140](images/datalake_bronze.jpg)
+
+---
+
 # Typical pipeline
 
 ![bg](images/pipeline.png)
+
 
 ---
 
