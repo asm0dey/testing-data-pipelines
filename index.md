@@ -91,6 +91,7 @@ Data is produces by
 ![width:700](images/etl.png)
 
 ---
+<!-- _backgroundImage: "linear-gradient(to bottom, #000, #000)" -->
 
 # What is a data pipeline?
 
