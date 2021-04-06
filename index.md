@@ -72,13 +72,13 @@ Data is produces by
 - clickstreams
 - etc.
 
-<!-- ---
+---
 
-# Big Data Storage Formats
+# Data sinks
 
-- CSV
-- ORC
-- Parquet -->
+- HDFS
+- S3, Azure Blob Storage
+- etc.
 
 ---
 <!-- _class: lead -->
@@ -102,7 +102,7 @@ Data is produces by
 # Who needs pipelines
 
 - Data Scientists
-- Data Analysts
+- Data Analytics
 - Marketing
 - PO
 
@@ -160,9 +160,11 @@ _Correctness is a business term_
 
 ![bg](images/unit_pipeline.png)
 
-Fake/mock input data
+Fake input data
 Reference data at the end of the pipeline
 
+---
+<!-- ToDO: Dataframes -->
 ---
 
 # Tools
