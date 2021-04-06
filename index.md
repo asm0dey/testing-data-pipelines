@@ -138,11 +138,26 @@ QA is about processes and not only about software quality.
 
 ![bg](images/pipeline.png)
 
-
 ---
 
 # Typical pipeline
-<!-- TODO: add json example -->
+
+```python
+from pyspark.sql import DataFrame, functions as F
+from pyspark.sql.types import *
+
+data_type = StructType([
+    StructField("pk", LongType(), False),
+    StructField("aa", StringType(), False)
+  ])
+
+transformed_data = (
+  sample_df
+  .withColumn("json_object", F.get_json_object(F.col("json_value"), "$.data"))
+  .withColumn("parsed_struct", F.from_json(F.col("json_object"), data_type))
+  .selectExpr("parsed_struct.*")
+)
+```
 
 ---
 
@@ -164,7 +179,11 @@ Fake input data
 Reference data at the end of the pipeline
 
 ---
-<!-- ToDO: Dataframes -->
+
+# Dataframes?
+
+![bg 60%](images/dataframe.png)
+
 ---
 
 # Tools
