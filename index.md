@@ -274,8 +274,6 @@ anonymize it
 
 ![bg](images/reference.png)
 
-<!-- TODO: compare with reference sample -->
-
 ---
 
 # Real data
@@ -303,7 +301,6 @@ Test:
 ❓ illegal data format
 
 ---
-<!-- TODO: rearrange -->
 
 # Real data expectations. Tools: 
 - [great expectations](https://greatexpectations.io/),
@@ -347,15 +344,12 @@ p > img {
 
 ## Great expectations
 ![height:480](images/ge_result.svg)
-<!-- TODO: persist df -->
 
 ---
 
 ## Python Deequ
 
 ![width:1140](images/pydq.svg)
-
-<!-- TODO: line highlighting -->
 
 <!-- 
 _footer: '
@@ -369,8 +363,6 @@ _footer: '
 
 ![width:1140](images/pydq2.svg)
 
-<!-- TODO: line highlighting -->
-
 <!-- 
 _footer: '
 [Testing data quality at scale with PyDeequ
@@ -382,8 +374,6 @@ _footer: '
 ## Python Deequ
 
 ![width:1140](images/pydq3.svg)
-
-<!-- TODO: line highlighting -->
 
 <!-- 
 _footer: '
@@ -469,8 +459,6 @@ Multiple dimensions:
 - test your initial data load
 
 ![bg](images/initial.png)
-
-<!-- TODO: reorder howto after real data -->
 
 ---
 
