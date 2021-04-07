@@ -353,37 +353,74 @@ p > img {
 
 ## Python Deequ
 
-![width:1140](images/pydq.svg)
-
-<!-- 
-_footer: '
-[Testing data quality at scale with PyDeequ
-](https://aws.amazon.com/blogs/big-data/testing-data-quality-at-scale-with-pydeequ/)'
--->
+- profilers
+- analyzers
+- __constraint suggestions__
+- constraint verification
+- metrics repository
 
 ---
-
 ## Python Deequ
 
-![width:1140](images/pydq2.svg)
+```Python
+check = Check(spark, CheckLevel.Warning, "Review Check")
+
+checkResult = (
+  VerificationSuite(spark)
+  .onData(sample_df)
+   .addCheck(
+     check.isComplete("Country") 
+     .isContainedIn("Country", ["RU","KZ"]))
+   .run()
+)
+    
+checkResult_df = VerificationResult.checkResultsAsDataFrame(spark, checkResult)
+checkResult_df.show()
+```
+<!-- TODO: pic -->
+
 
 <!-- 
 _footer: '
 [Testing data quality at scale with PyDeequ
-](https://aws.amazon.com/blogs/big-data/testing-data-quality-at-scale-with-pydeequ/)'
+](https://aws.amazon.com/blogs/big-data/testing-data-quality-at-scale-with-pydeequ/)
+
+[PyDeequ documentation](https://pydeequ.readthedocs.io/_/downloads/en/latest/pdf/)'
 -->
+---
+## Python Deequ. C
+
+constraint | constraint_status | constraint_message
+-----|------|:-----:
+CompletenessConstraint | Success |  
+ComplianceConstraint | Failure | Value: 0.5 does not meet the constraint requirement!
 
 ---
+## Python Deequ. Histogram
 
-## Python Deequ
+```Python
+analysisResult = ( 
+  AnalysisRunner(spark)
+  .onData(sample_df)
+  .addAnalyzer(Histogram("Country"))
+  .run()
+)
 
-![width:1140](images/pydq3.svg)
+analysisResult_df = AnalyzerContext.successMetricsAsDataFrame(spark, analysisResult)
+analysisResult_df.show()
+```
+<!-- TODO: pic -->
 
-<!-- 
-_footer: '
-[Testing data quality at scale with PyDeequ
-](https://aws.amazon.com/blogs/big-data/testing-data-quality-at-scale-with-pydeequ/)'
--->
+---
+## Python Deequ. Histogram
+
+entity | instance | name | value
+-----|------|-----|:-----:
+Column | Country |  Histogram.bins | 4
+Column | Country |  Histogram.abs.RU | 1
+Column | Country |  Histogram.ratio.RU | 0.25
+Column | Country |  Histogram.abs.KZ | 1
+Column | Country |  Histogram.ratio.KZ | 0.25
 
 ---
 
