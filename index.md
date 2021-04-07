@@ -362,22 +362,7 @@ p > img {
 ---
 ## Python Deequ
 
-```Python
-check = Check(spark, CheckLevel.Warning, "Review Check")
-
-checkResult = (
-  VerificationSuite(spark)
-  .onData(sample_df)
-   .addCheck(
-     check.isComplete("Country") 
-     .isContainedIn("Country", ["RU","KZ"]))
-   .run()
-)
-    
-checkResult_df = VerificationResult.checkResultsAsDataFrame(spark, checkResult)
-checkResult_df.show()
-```
-<!-- TODO: pic -->
+![width:1140](images/pydq1.png)
 
 
 <!-- 
@@ -387,6 +372,49 @@ _footer: '
 
 [PyDeequ documentation](https://pydeequ.readthedocs.io/_/downloads/en/latest/pdf/)'
 -->
+
+---
+## Python Deequ
+
+![width:1140](images/pydq2.png)
+
+
+<!-- 
+_footer: '
+[Testing data quality at scale with PyDeequ
+](https://aws.amazon.com/blogs/big-data/testing-data-quality-at-scale-with-pydeequ/)
+
+[PyDeequ documentation](https://pydeequ.readthedocs.io/_/downloads/en/latest/pdf/)'
+-->
+
+---
+## Python Deequ
+
+![width:1140](images/pydq3.png)
+
+
+<!-- 
+_footer: '
+[Testing data quality at scale with PyDeequ
+](https://aws.amazon.com/blogs/big-data/testing-data-quality-at-scale-with-pydeequ/)
+
+[PyDeequ documentation](https://pydeequ.readthedocs.io/_/downloads/en/latest/pdf/)'
+-->
+
+---
+## Python Deequ
+
+![width:1140](images/pydq4.png)
+
+
+<!-- 
+_footer: '
+[Testing data quality at scale with PyDeequ
+](https://aws.amazon.com/blogs/big-data/testing-data-quality-at-scale-with-pydeequ/)
+
+[PyDeequ documentation](https://pydeequ.readthedocs.io/_/downloads/en/latest/pdf/)'
+-->
+
 ---
 ## Python Deequ. C
 
@@ -398,24 +426,14 @@ ComplianceConstraint | Failure | Value: 0.5 does not meet the constraint require
 ---
 ## Python Deequ. Histogram
 
-```Python
-analysisResult = ( 
-  AnalysisRunner(spark)
-  .onData(sample_df)
-  .addAnalyzer(Histogram("Country"))
-  .run()
-)
-
-analysisResult_df = AnalyzerContext.successMetricsAsDataFrame(spark, analysisResult)
-analysisResult_df.show()
-```
+![width:1140](images/pydq_hysto.png)
 <!-- TODO: pic -->
 
 ---
 ## Python Deequ. Histogram
 
 entity | instance | name | value
------|------|-----|:-----:
+-----|------|-----|-----:
 Column | Country |  Histogram.bins | 4
 Column | Country |  Histogram.abs.RU | 1
 Column | Country |  Histogram.ratio.RU | 0.25
