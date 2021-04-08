@@ -184,12 +184,6 @@ Reference data at the end of the pipeline
 
 ---
 
-# Dataframes?
-
-![bg 60%](images/dataframe.png)
-
----
-
 # Tools
 
 [holdenk/spark-testing-base](https://github.com/holdenk/spark-testing-base) ← Tools to run tests
