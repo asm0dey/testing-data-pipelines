@@ -317,6 +317,15 @@ _footer: '[Automated Testing For Protecting Data Pipelines from Undocumented Ass
 
 ---
 
+## Real data expectations
+
+- profilers
+- constraint suggestions
+- constraint verification
+- metrics
+- metrics strores
+---
+
 ![width:1140](images/dq1.svg)
 
 ---
@@ -348,16 +357,6 @@ p > img {
 
 ## Great expectations
 ![height:480](images/ge_result.svg)
-
----
-
-## Python Deequ
-
-- profilers
-- analyzers
-- __constraint suggestions__
-- constraint verification
-- metrics repository
 
 ---
 ## Python Deequ
@@ -416,7 +415,7 @@ _footer: '
 -->
 
 ---
-## Python Deequ. C
+## Python Deequ.
 
 constraint | constraint_status | constraint_message
 -----|------|:-----:
@@ -424,21 +423,11 @@ CompletenessConstraint | Success |
 ComplianceConstraint | Failure | Value: 0.5 does not meet the constraint requirement!
 
 ---
-## Python Deequ. Histogram
+## Real data ecpectations. Use cases
 
-![width:1140](images/pydq_hysto.png)
-<!-- TODO: pic -->
-
----
-## Python Deequ. Histogram
-
-entity | instance | name | value
------|------|-----|-----:
-Column | Country |  Histogram.bins | 4
-Column | Country |  Histogram.abs.RU | 1
-Column | Country |  Histogram.ratio.RU | 0.25
-Column | Country |  Histogram.abs.KZ | 1
-Column | Country |  Histogram.ratio.KZ | 0.25
+* pre-ingestion and post-ingestion data validaton
+* before pipeline development
+* monitoring and alerting
 
 ---
 
