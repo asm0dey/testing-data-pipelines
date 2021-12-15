@@ -41,6 +41,8 @@ Pasha Finkelshteyn, JetBrains
 
 Industrial IoT, DE, Storages
 
+DE or DIE
+
 ---
 <!-- _class: lead -->
 # Pasha Finkelshteyn
@@ -50,6 +52,8 @@ Industrial IoT, DE, Storages
 Developer :avocado: for Big Data @ JetBrains
 
 @asm0di0
+
+DE or DIE
 
 ---
 
@@ -258,7 +262,7 @@ Why are component tests not enough?
 
 ---
 
-![bg](images/sample.png)
+![bg 110%](images/sample.png)
 
 # Real data
 <br/>
@@ -270,14 +274,27 @@ anonymize it
 
 # Compare to reference
 
-![bg](images/reference.png)
+![bg 89%](images/reference.png)
 
 ---
 
+# Comparison example
+
+gender | reference | id | match
+:-----:|:---------:|---:|-----:
+  m    | m         | 1  | TRUE
+  f    | c         | 2  | FALSE
+  u    | u         | 3  | TRUE
+  c    | c         | 4  | TRUE
+  m    | f         | 5  | FALSE
+
+
+---
+<!-- _class: lead -->
+
 # Real data
 
-Deploy full data backup on stage env,
-anonymize it :money_mouth_face:
+Deploy full data backup on stage env, anonymize it :money_mouth_face:
 
 ---
 
@@ -441,12 +458,12 @@ ComplianceConstraint | Failure | Value: 0.5 does not meet the constraint require
 # Monitoring 
 
 What?
-- data volumes
-- counters
-- time
-- dead letter queue monitoring
-- service health
-- business metrics
+* data volumes
+* counters
+* time
+* dead letter queue monitoring
+* service health
+* business metrics
 
 ---
 
@@ -455,6 +472,7 @@ What?
 How?
 - use Listeners
 - use data aggregations
+- AirFlow (or another orchestrator)
 
 ---
 <!-- _class: lead -->
