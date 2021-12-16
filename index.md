@@ -60,7 +60,10 @@ DE or DIE
 # What is Big Data
 
 * Doesn't fit the single node (or Excel)
-* Maybe scaled when growing
+* Maybe scaled when growing (3V)
+    - Velocity
+    - Variety
+    - Volume
 * Enough data to make reliable business solutions
 
 <!-- 3V: volume, velocity, variety -->
