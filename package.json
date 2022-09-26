@@ -4,12 +4,15 @@
   "main": "index.html",
   "license": "MIT",
   "scripts": {
-    "build": "marp index.md",
-    "build-pdf": "marp --allow-local-files --pdf index.md",
-    "build-pptx": "marp --allow-local-files --pptx index.md",
+    "build": "marp --html index.md --url https://asm0dey.github.io/de-ds",
+    "build-pdf": "PUPPETEER_TIMEOUT=0 marp --html --allow-local-files --pdf index.md",
+    "build-pptx": "PUPPETEER_TIMEOUT=0 marp --html --allow-local-files --pptx index.md",
     "serve": "marp server --watch index.md"
   },
   "devDependencies": {
-    "@marp-team/marp-cli": "^1.0.1"
+    "remark": "^14.0.2"
+  },
+  "dependencies": {
+    "@marp-team/marp-cli": "^2.2.0"
   }
 }

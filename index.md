@@ -27,23 +27,11 @@ footer {
 # Himalayan Peaks
 ## of Testing Data Pipelines
 
-Ksenia Tomak, Dodo Engineering
+Ksenia Tomak, HelloFresh
 Pasha Finkelshteyn, JetBrains
 
 ---
 
-# Ksenia Tomak
-
-![bg left:40%](images/ksenia.jpg)
-
-- Tech Lead, Dodo Engineering
-- @if_no_then_yes
-
-Industrial IoT, DE, Storages
-
-DE or DIE
-
----
 <!-- _class: lead -->
 # Pasha Finkelshteyn
 
@@ -148,27 +136,27 @@ QA is about processes and not only about software quality.
 ---
 # Typical pipeline
 
-![width:1000](images/spark1.svg)
+![width:1000](images/spark-j1.svg)
 
 ---
 # Typical pipeline
 
-![width:1000](images/spark2.svg)
+![width:1000](images/spark-j2.svg)
 
 ---
 # Typical pipeline
 
-![width:1000](images/spark3.svg)
+![width:1000](images/spark-j3.svg)
 
 ---
 # Typical pipeline
 
-![width:1000](images/spark4.svg)
+![width:1000](images/spark-j4.svg)
 
 ---
 # Typical pipeline
 
-![width:1000](images/spark5.svg)
+![width:1000](images/spark-j5.svg)
 
 ---
 
@@ -229,17 +217,17 @@ Supported languages:
 ---
 
 # Test Containers
-![width:1140](images/tc.svg)
+![width:1140](images/tc-java.svg)
 
 ---
 
 # Test Containers
-![width:1140](images/tc2.svg)
+![width:1140](images/tc-j2.svg)
 
 ---
 
 # Test Containers
-![width:1140](images/tc3.svg)
+![width:1140](images/tc-j3.svg)
 
 ---
 
