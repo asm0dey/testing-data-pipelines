@@ -41,45 +41,10 @@ Developer :avocado: for Big Data @ JetBrains
 
 @asm0di0
 
-DE or DIE
+:elephant: @asm0dey@fosstodon.org
 
 ---
 
-# What is Big Data
-
-* Doesn't fit the single node (or Excel)
-* Maybe scaled when growing (3V)
-    - Velocity
-    - Variety
-    - Volume
-* Enough data to make reliable business solutions
-
-<!-- 3V: volume, velocity, variety -->
-
----
-
-# Who are DEs
-
-Plumber of data
-
-Data is produces by 
-- sensors
-- clickstreams
-- etc.
-
----
-
-# Data sinks
-
-- HDFS
-- S3, Azure Blob Storage
-- etc.
-
----
-<!-- _class: lead -->
-# What is a data pipeline?
-
----
 <!-- _class: lead -->
 # Data processing
 
@@ -104,14 +69,22 @@ Data is produces by
 ---
 
 <!-- _class: lead -->
-# <!-- fit --> QA ?= QC
+# <!-- fit --> It have to be tested!
+
+---
+<!-- _class: lead -->
+# Pyramid of testing?
+
+
+---
+<!-- _class: lead -->
+# Pyramid of testing?
+
+![bg right:57% fit brightness:0.9](images/pyramid_e.png)
 
 ---
 
-<!-- _class: lead -->
-# <!-- fit --> QA ≠ QC
-
-QA is about processes and not only about software quality.
+![bg fit](images/real_pyramid.webp)
 
 ---
 
@@ -347,7 +320,6 @@ _footer: '[Automated Testing For Protecting Data Pipelines from Undocumented Ass
 
 ![width:1140](images/ge.svg)
 
-
 ---
 
 <style scoped>
@@ -549,3 +521,5 @@ _footer: ""
 
 @asm0di0
 @if_no_then_yes
+
+:elephant: @asm0dey@fosstodon.org
