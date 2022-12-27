@@ -190,17 +190,17 @@ Supported languages:
 ---
 
 # Test Containers
-![width:1140](images/tc-java.svg)
+![width:1140](images/tc-python1.png)
 
 ---
 
 # Test Containers
-![width:1140](images/tc-j2.svg)
+![width:1140](images/tc-python2.png)
 
 ---
 
 # Test Containers
-![width:1140](images/tc-j3.svg)
+![width:1140](images/tc-python3.png)
 
 ---
 
@@ -209,7 +209,7 @@ Supported languages:
 ---
 
 <!-- _backgroundImage: #FFFFFF -->
-![bg](rgb(255,255,255))
+<!-- _backgroundColor: "rgb(255,255,255)" -->
 ![](images/enterprise-bi-adf.png)
 
 ---
@@ -318,7 +318,7 @@ _footer: '[Automated Testing For Protecting Data Pipelines from Undocumented Ass
 ---
 ## Great expectations
 
-![width:1140](images/ge.svg)
+![width:1140](images/ge-1.svg)
 
 ---
 
