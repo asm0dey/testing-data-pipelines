@@ -498,7 +498,7 @@ Run a parallel job with a different sink
 
 ---
 
-![bg](images/performance.png)
+![bg fit](images/final_pyramid.png)
 
 ---
 
