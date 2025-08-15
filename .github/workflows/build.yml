@@ -10,7 +10,7 @@ jobs:
           persist-credentials: false
       - uses: pnpm/action-setup@v2.2.4
         with:
-          version: 7.1.3
+          version: 7.33.7
 
       - name: Get pnpm store directory
         id: pnpm-cache
